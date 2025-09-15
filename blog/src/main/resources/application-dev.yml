@@ -32,11 +32,11 @@ mybatis-plus:
 
 # 阿里云OSS对象存储
 oss:
-  #  配置地域节点Endpoint
   endpoint: oss-cn-beijing.aliyuncs.com
-  accessKeyId: LTAI5tN4SEXXZgjuRWpdJVqo
-  accessKeySecret: UNvKEa0PNDmFWJrExBY3HgwAE8xy3F
+  accessKeyId: ${ALIYUN_ACCESS_KEY}
+  accessKeySecret: ${ALIYUN_SECRET_KEY}
   bucketName: xlzfa
+
 
 amap:
   api:

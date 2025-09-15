@@ -39,3 +39,7 @@ Thumbs.db
 *.tmp
 *.bak
 *.orig
+
+# 忽略阿里云 AK 配置
+blog/src/main/resources/aliyun.yml
+

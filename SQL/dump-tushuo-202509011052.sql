@@ -18,6 +18,9 @@
 --
 -- Table structure for table `comment`
 --
+CREATE DATABASE tushuo CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+
+USE tushuo;
 
 DROP TABLE IF EXISTS `comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

@@ -2,9 +2,9 @@ server:
   port: 8989
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/tushuo?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://182.92.140.129:3306/tushuo?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
-    password: www55555l.
+    password: www55555l
     driver-class-name: com.mysql.cj.jdbc.Driver
   servlet:
     multipart:
@@ -13,7 +13,8 @@ spring:
 
   redis:
     port: 6379
-    host: localhost
+    host: 182.92.140.129
+    password: 123
 
   mvc:
     pathmatch:

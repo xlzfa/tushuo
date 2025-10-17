@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "sg-blog-vue",
+			"problemMatcher": [],
+			"label": "npm: dev - sg-blog-vue",
+			"detail": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "sg-blog-vue",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - sg-blog-vue",
+			"detail": "node build/build.js"
+		}
+	]
+}

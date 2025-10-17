@@ -50,7 +50,7 @@
     
 
     <!-- 右侧上滑小图片 -->
-    <div
+    <!-- <div
       v-if="this.$store.state.themeObj.user_start != 0"
       :class="gotoTop ? 'toTop hidden' : 'toTop goTop hidden'"
       @click="toTopfun"
@@ -77,7 +77,7 @@
         "
         alt=""
       />
-    </div>
+    </div> -->
   </div>
 </template>
 

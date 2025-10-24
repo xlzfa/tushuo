@@ -2,11 +2,13 @@ package com.guo.handler.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.guo.utils.SecurityUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+//@Slf4j
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
@@ -27,6 +29,14 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void updateFill(MetaObject metaObject) {
         this.setFieldValByName("updateTime", new Date(), metaObject);
-        this.setFieldValByName(" ", SecurityUtils.getUserId(), metaObject);
+
+        Long userId = null;
+        try {
+            userId = SecurityUtils.getUserId();
+        } catch (Exception e) {
+            // 无登录用户：定时任务 / 单元测试 / 初始化脚本
+            userId = -1L;
+        }
+        this.setFieldValByName("updateBy", userId, metaObject);   // ← 改这里
     }
 }

@@ -65,7 +65,8 @@ public class Article{
 
     public Article(Long id, long viewCount) {
         this.id = id;
-        this.viewCount = viewCount;
+//        this.viewCount = (this.viewCount == null ? 0L : this.viewCount) + delta;
+    this.viewCount = viewCount;
     }
 }
 
